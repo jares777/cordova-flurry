@@ -20,10 +20,34 @@ To install the plugin, use the Cordova CLI and enter the following:<br />
 `cordova plugin add https://github.com/Initsogar/cordova-flurry`
 
 ###- Specific instructions for Android
-(Coming soon)
+
+Add the following code in your main activity.
+
+```
+  @Override
+  protected void onStart()
+  {
+    super.onStart();
+    FlurryAgent.onStartSession(this, "YOUR_API_KEY");
+  }
+
+  @Override
+  protected void onStop()
+  {
+    super.onStop();
+    FlurryAgent.onEndSession(this);
+  }
+```
+
+You'll need to import FlurryAgent class using:<br />
+`import com.flurry.android.FlurryAgent;`
 
 ###- Specific instructions for iOS
-(Coming soon)
+Add the following code inside your didFinishLaunchingWithOptions method in your AppDelegate.m
+```
+  [Flurry startSession:@"YOUR_API_KEY"];
+```
+Remember to replace YOUR_API_KEY with your own key.
 
 
 Basic Usage
