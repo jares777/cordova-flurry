@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://cordova.apache.org/ns/plugins/1.0"
+           id="com.phonegap.plugins.flurry"
+      version="1.0.0">
+    <name>Flurry</name>
+    <description>Flurry Analytics for Apahe Cordova</description>
+    <license>Apache</license>
+    <keywords>cordova,flurry</keywords>
+
+    <js-module src="www/flurry.js" name="Flurry">
+        <clobbers target="Flurry" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="FlurryPlugin" >
+                <param name="android-package" value="com.phonegap.plugins.flurry.Flurry" />
+            </feature>
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+        </config-file>
+
+        <source-file src="src/android/FlurryAnalytics_3.3.0.jar" target-dir="libs" framework="true" />
+        <source-file src="src/android/Flurry.java" target-dir="src/com/phonegap/plugins/flurry" />
+    </platform>
+    <!-- /android -->
+
+    <!-- iOS -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="FlurryPlugin">
+                <param name="ios-package" value="FlurryPlugin"/>
+            </feature>
+        </config-file>
+        <header-file src="src/ios/Flurry.h" />
+        <header-file src="src/ios/FlurryPlugin.h" />
+        <source-file src="src/ios/FlurryPlugin.m" />
+        <source-file src="src/ios/libFlurry_4.3.2.a" framework="true" />
+    </platform>
+    <!-- /iOS -->
+
+</plugin>
