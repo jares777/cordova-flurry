@@ -38,7 +38,7 @@
         <header-file src="src/ios/Flurry.h" />
         <header-file src="src/ios/FlurryPlugin.h" />
         <source-file src="src/ios/FlurryPlugin.m" />
-        <source-file src="src/ios/libFlurry_4.3.2.a" framework="true" />
+        <source-file src="src/ios/libFlurry_5.4.0.a" framework="true" />
     </platform>
     <!-- /iOS -->
 
