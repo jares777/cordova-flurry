@@ -36,6 +36,7 @@
             </feature>
         </config-file>
         <header-file src="src/ios/Flurry.h" />
+        <header-file src="src/ios/FlurryWatch.h" />
         <header-file src="src/ios/FlurryPlugin.h" />
         <source-file src="src/ios/FlurryPlugin.m" />
         <source-file src="src/ios/libFlurry.a" framework="true" />
