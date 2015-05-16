@@ -23,7 +23,7 @@
             <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
         </config-file>
 
-        <source-file src="src/android/FlurryAnalytics_3.3.0.jar" target-dir="libs" framework="true" />
+        <source-file src="src/android/FlurryAnalytics.jar" target-dir="libs" framework="true" />
         <source-file src="src/android/Flurry.java" target-dir="src/com/phonegap/plugins/flurry" />
     </platform>
     <!-- /android -->
@@ -38,7 +38,7 @@
         <header-file src="src/ios/Flurry.h" />
         <header-file src="src/ios/FlurryPlugin.h" />
         <source-file src="src/ios/FlurryPlugin.m" />
-        <source-file src="src/ios/libFlurry_4.3.2.a" framework="true" />
+        <source-file src="src/ios/libFlurry.a" framework="true" />
     </platform>
     <!-- /iOS -->
 
